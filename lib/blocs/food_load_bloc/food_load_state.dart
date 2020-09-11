@@ -1,6 +1,5 @@
 import 'package:camera_demo/models/food_model.dart';
 import 'package:camera_demo/custom_error_handler/custom_error_handler.dart';
-import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'food_load_state.freezed.dart';

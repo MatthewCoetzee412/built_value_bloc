@@ -1,4 +1,3 @@
-import 'package:camera_demo/blocs/food_load_bloc/food_load_state.dart';
 import 'package:camera_demo/models/food_model.dart';
 import 'package:camera_demo/custom_error_handler/custom_error_handler.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
