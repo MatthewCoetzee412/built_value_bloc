@@ -6,17 +6,13 @@ import 'package:camera_demo/repository/firebase_repository.dart';
 import 'package:camera_demo/custom_error_handler/custom_error_handler.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rxdart/rxdart.dart';
 
 class FoodLoadBloc extends Bloc<FoodLoadEvent, FoodLoadState> {
   final FirebaseRepository _repository;
 
-  FoodLoadBloc(this._repository);
+  FoodLoadBloc(this._repository) : super(FoodLoadState.intial());
 
   StreamSubscription<Either<ItemFailure, List<Food>>> _streamSubscription;
-
-  @override
-  FoodLoadState get initialState => FoodLoadState.intial();
 
   @override
   Stream<FoodLoadState> mapEventToState(FoodLoadEvent event) async* {

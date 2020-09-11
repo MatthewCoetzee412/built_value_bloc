@@ -7,13 +7,12 @@ import 'package:camera_demo/dependency_injection/injection_container.dart';
 import 'package:camera_demo/models/food_model.dart';
 import 'package:camera_demo/custom_error_handler/custom_error_handler.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dartz/dartz.dart' as dartz;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   initGetIt();
-  BlocSupervisor.delegate = BlocLogging();
+  Bloc.observer = BlocLogging();
   runApp(MaterialApp(
     home: MyApp(),
   ));
@@ -69,7 +68,7 @@ class _MyAppState extends State<MyApp> {
         title: Text('Built Value bloc project'),
       ),
       body: BlocListener<FoodLoadBloc, FoodLoadState>(
-          bloc: _bloc,
+          cubit: _bloc,
           listener: (context, state) {
             state.when(
               intial: () {},
@@ -85,7 +84,7 @@ class _MyAppState extends State<MyApp> {
             );
           },
           child: BlocBuilder<FoodLoadBloc, FoodLoadState>(
-              bloc: _bloc,
+              cubit: _bloc,
               builder: (context, state) {
                 return state.maybeWhen(
                     orElse: () => Container(),
@@ -175,7 +174,7 @@ class _AddFoodItemState extends State<AddFoodItem> {
         title: Text('Add Food item'),
       ),
       body: BlocListener<FoodCudBloc, FoodCudState>(
-        bloc: _bloc,
+        cubit: _bloc,
         listener: (context, state) {
           state.when(
             intial: () {},

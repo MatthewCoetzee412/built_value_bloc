@@ -4,7 +4,7 @@ description: A camera demo application with firebase incorperated
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.6.1 <3.0.0"
+  sdk: '>=2.6.1 <3.0.0'
 
 dependencies:
   flutter:
@@ -16,13 +16,13 @@ dependencies:
   draggable_scrollbar: ^0.0.4
   get_it: ^4.0.2
   built_collection: ^4.3.2
-  flutter_bloc: ^3.2.0
+  flutter_bloc: ^6.0.5
   dartz: ^0.9.1
   cloud_firestore: ^0.13.5
-  equatable: ^1.1.1
-  rxdart: 
+  equatable: ^1.2.5
+  rxdart: ^0.24.1
   freezed_annotation: ^0.11.0+1
-  bloc: ^3.0.0
+  bloc: ^6.0.3
   built_value: ^7.1.0
 
 dev_dependencies:
@@ -33,5 +33,4 @@ dev_dependencies:
   freezed: ^0.11.6
 
 flutter:
-
   uses-material-design: true

@@ -5,10 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class FoodCudBloc extends Bloc<FoodCudEvent, FoodCudState> {
   final FirebaseRepository _repository;
 
-  FoodCudBloc(this._repository);
-
-  @override
-  FoodCudState get initialState => FoodCudState.intial();
+  FoodCudBloc(this._repository) : super(FoodCudState.intial());
 
   @override
   Stream<FoodCudState> mapEventToState(FoodCudEvent event) async* {
